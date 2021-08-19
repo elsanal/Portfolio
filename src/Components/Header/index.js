@@ -24,7 +24,8 @@ const HeaderLink = styled.a`
     text-align: left;
     padding: 4.5%;
     text-decoration: none;
-    background-color: #2E1042EC;
+    background-color: #272A29EC;
+    
 `;
 
 export default Header

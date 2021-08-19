@@ -85,8 +85,10 @@ const ServiceWrapper = styled.div`
     flex-wrap:wrap;
     min-height: 90vh;
     height:fit-content;
-    width:100%;
-    background-color:#161313C0;
+    width:fit-content;
+    background-color:#0C0B0BF5;
+    transition: all 1s ease;
+    transform: rotate(1turn);
 `;
 const Card = styled.div`
     display: flex;
@@ -100,6 +102,8 @@ const Card = styled.div`
     /* padding:0%; */
     background-color:#A8A3A3C0;
     border-radius:3% 3% 3% 3%;
+    transition: all 1s ease;
+    transform: rotate(1turn);
 `;
 const Image = styled.img`
     /* height:25vw; */

@@ -41,7 +41,7 @@ const AboutWrapper = styled.div`
     min-height: 90vh;
     height:fit-content;
     width:100%;
-    background-color:#161313C0;
+    background-color:#0C0B0BF5;
 `;
 
 const AboutImage = styled.img`
