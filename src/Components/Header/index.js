@@ -24,7 +24,7 @@ const HeaderLink = styled.a`
     text-align: left;
     padding: 4.5%;
     text-decoration: none;
-    background-color: #272A29EC;
+    /* background-color: #272A29EC; */
     
 `;
 
