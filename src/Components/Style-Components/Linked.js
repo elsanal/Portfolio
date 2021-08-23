@@ -4,7 +4,7 @@ const Linked = styled.a`
   background-color: ${props=>props.color}; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

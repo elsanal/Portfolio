@@ -2,14 +2,20 @@ import styled from 'styled-components'
 
 const Description = styled.div`
     display: flex;
-    flex: 1;
-    align-items: top;
-    align-content: top;
-    justify-content: top;
-    justify-items: top;
+    /* flex: 1; */
+    min-width:300px;
+    flex-wrap: wrap;
     flex-direction: column;
-    background-color:#F0EAEAE3 ;
+    /* background-color:#E2E7E6FA ; */
     margin:0.5%;
+`;
+
+const DescBox = styled.div`
+    height:fit-content;
+    max-height:100px;
+    padding:2%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 `;
 
 const DescBody = styled.p`
@@ -17,7 +23,7 @@ const DescBody = styled.p`
     text-align: left;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
-    /* background-color:#945454E3; */
+    text-overflow: ellipsis;
 `;
 
-export {Description,DescBody}
+export {Description,DescBody,DescBox}

@@ -14,8 +14,8 @@ function App() {
   return (
     <Suspense fallback="loading">
       <div className="App">
-        <Header/>
         <Router>
+        <Header/>
             <Switch>
                 <Route component={About} path="/about" exact/>
                 <Route component={About} path="/" exact/>

@@ -1,31 +1,28 @@
-import React from 'react'
+import React, {Suspense, useState } from 'react'
 import './style.css'
-import styled from 'styled-components'
+import {HeaderWrapper} from '../Style-Components/Wrapper'
+import HeaderUl from '../Style-Components/List'
+import {NavLink} from 'react-router-dom'
 
 
 function Header() {
+    const activeStyle = {
+        fontWeight:"bold",
+        color:"white",
+        backgroundColor:"#0C0B0BF5",
+    }
     return (
-        <div className='header'>
-            <ul>
-                <li><HeaderLink href="/about">About Me</HeaderLink></li>
-                <li><HeaderLink href="/projects">Projects</HeaderLink></li>
-                <li><HeaderLink href="/services">Services</HeaderLink></li>
-                <li><HeaderLink href="/blogs">Blogs</HeaderLink></li>
-                <li><HeaderLink href="/contacts">Contacts</HeaderLink></li>
-            </ul>
-        </div>
+        <HeaderWrapper>
+            <HeaderUl>
+               <NavLink to="/about" activeStyle={activeStyle} className="nav-link">About</NavLink>
+               <NavLink to="/projects" activeStyle={activeStyle} className="nav-link">Projects</NavLink>
+               <NavLink to="/services" activeStyle={activeStyle} className="nav-link">Services</NavLink>
+               <NavLink to="/blogs" activeStyle={activeStyle} className="nav-link">Blogs</NavLink>
+               <NavLink to="/contacts" activeStyle={activeStyle} className="nav-link">Contacts</NavLink>
+            </HeaderUl>
+        </HeaderWrapper>
     )
 }
 
-const HeaderLink = styled.a`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.3vw;
-    color: white;
-    text-align: left;
-    padding: 4.5%;
-    text-decoration: none;
-    /* background-color: #272A29EC; */
-    
-`;
 
 export default Header

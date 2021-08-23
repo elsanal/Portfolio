@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import Wrapper from '../../Components/Style-Components/Wrapper'
+import {Wrapper} from '../../Components/Style-Components/Wrapper'
 import Image from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 import Title from '../../Components/Style-Components/Title'
@@ -19,7 +19,7 @@ import edu2 from '../../Database/images/alex-elsone.JPG'
 function Projects() {
     return (
         <Wrapper>
-            <ColCard>
+            <ColCard >
                 <RowCard>
                     <Description>
                         <Title>Campus+ app project for students</Title>
@@ -54,7 +54,7 @@ function Projects() {
                     <Image src={phone1}/>
                 </RowCard>
             </ColCard>
-            <ColCard>
+            <ColCard >
                 <RowCard>
                     <Description>
                         <Title>Website to find scholarship</Title>
@@ -84,6 +84,40 @@ function Projects() {
                     </Description>
                 </RowCard>
                 {/* <br/> */}
+                <RowCard>
+                    <Image src={mobile}/>
+                    <Image src={web}/>
+                </RowCard>
+            </ColCard>
+            <ColCard >
+                <RowCard>
+                    <Description>
+                        <Title>Website to find scholarship</Title>
+                        <DescBody>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et sapiente libero est, ducimus veniam itaque eos totam nesciunt magni tempore vero dicta odio, labore maiores.</DescBody>
+                    </Description>
+                    <Description>
+                        <Title>Technologies</Title>
+                        <DescBody>
+                            - Flutter <br />
+                            - Firebase <br />
+                            - Sqlite <br />
+                            - MySQL
+                        </DescBody>
+                    </Description>
+                    <Description>
+                        <Title>For more info</Title>
+                        <DescBody>
+                            <Linked href="https://github.com/"color={"#080808"}>
+                                Github</Linked>
+                            <Linked href="https://github.com/"color={"#DD0C0C"}>
+                                Youtube</Linked>
+                            <Linked href="https://github.com/"color={"#482464"}>
+                                Play Store</Linked>
+                            <Linked href="https://github.com/"color={"#0D2412"}>
+                                Website</Linked>
+                        </DescBody>
+                    </Description>
+                </RowCard>
                 <RowCard>
                     <Image src={mobile}/>
                     <Image src={web}/>
