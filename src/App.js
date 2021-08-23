@@ -7,6 +7,7 @@ import Services from './Pages/Services'
 import Blogs from './Pages/Blogs'
 import Contacts from './Pages/Contacts'
 import Projects from './Pages/Projects'
+import Resume from './Pages/Resume'
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <Switch>
                 <Route component={About} path="/about" exact/>
                 <Route component={About} path="/" exact/>
+                <Route component={Resume} path="/resume" />
                 <Route component={Services} path="/services" />
                 <Route component={Projects} path="/projects" />
                 <Route component={Blogs} path="/blogs" />

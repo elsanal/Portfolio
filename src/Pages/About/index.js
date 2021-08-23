@@ -5,30 +5,35 @@ import profile from '../../Database/images/graduation.JPG'
 import edu1 from '../../Database/images/elsone-prof.jpeg'
 import edu2 from '../../Database/images/alex-elsone.JPG'
 import styled from 'styled-components'
-
+import {Wrapper} from '../../Components/Style-Components/Wrapper'
+import {Description, DescBox, DescBody} from '../../Components/Style-Components/Description'
+import {Profile} from '../../Components/Style-Components/ImageView'
+import Title from '../../Components/Style-Components/Title'
+import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 
 function About() {
     return (
-        <AboutWrapper>
-            <AboutImage src={profile}/>
-            <AboutDescription color={'#13395CC0'}>
-                <AboutTitle>About Me!</AboutTitle>
+        <Wrapper>
+            <RowCard>
+                <Profile src={edu1}/>
                 <AboutBody>{AboutMe.presentation}</AboutBody>
-            </AboutDescription>
-            <AboutDescription color={'#11554FC0'}>
-                <AboutTitle>Education</AboutTitle>
+            </RowCard>
+            
+
+            <Description color={'#11554FC0'}>
+                <Title>Education</Title>
                 <AboutSubTitle> 👉 Beihang University</AboutSubTitle>
                 <AboutBody>{AboutMe.china}</AboutBody>
-            </AboutDescription>
-            <AboutImage src={edu2}/>
-            <AboutImage src={edu1}/>
-            <AboutDescription color={'#114555C0'}>
-                <AboutTitle>Education</AboutTitle>
+            </Description>
+            <Profile src={edu2}/>
+            <Profile src={edu1}/>
+            <Description color={'#114555C0'}>
+                <Title>Education</Title>
                 <AboutSubTitle>👉 National Tsing Hua University</AboutSubTitle>
                 <AboutBody>{AboutMe.taiwan}</AboutBody>
-            </AboutDescription>
+            </Description>
             
-        </AboutWrapper>
+        </Wrapper>
     )
 }
 

@@ -10,7 +10,7 @@ min-height: 90vh;
 height:fit-content;
 width:fit-content;
 padding: 2%;
-background-color:#0C0B0BF5;
+background-color:#0C0B0BA8;
 `;
 
 const HeaderWrapper = styled.div`

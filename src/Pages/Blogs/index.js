@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 import {Wrapper} from '../../Components/Style-Components/Wrapper'
-import Image from '../../Components/Style-Components/ImageView'
+import {Image} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 import Title from '../../Components/Style-Components/Title'
 import Linked from '../../Components/Style-Components/Linked'

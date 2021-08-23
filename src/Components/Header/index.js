@@ -17,6 +17,7 @@ function Header() {
                <NavLink to="/about" activeStyle={activeStyle} className="nav-link">About</NavLink>
                <NavLink to="/projects" activeStyle={activeStyle} className="nav-link">Projects</NavLink>
                <NavLink to="/services" activeStyle={activeStyle} className="nav-link">Services</NavLink>
+               <NavLink to="/resume" activeStyle={activeStyle} className="nav-link">Resume</NavLink>
                <NavLink to="/blogs" activeStyle={activeStyle} className="nav-link">Blogs</NavLink>
                <NavLink to="/contacts" activeStyle={activeStyle} className="nav-link">Contacts</NavLink>
             </HeaderUl>

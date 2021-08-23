@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 import {Wrapper} from '../../Components/Style-Components/Wrapper'
-import Image from '../../Components/Style-Components/ImageView'
+import {Image} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 import Title from '../../Components/Style-Components/Title'
 import Button from '../../Components/Style-Components/Button'
@@ -19,7 +19,7 @@ import edu2 from '../../Database/images/alex-elsone.JPG'
 function Projects() {
     return (
         <Wrapper>
-            <ColCard >
+            <ColCard width={"100%"}>
                 <RowCard>
                     <Description>
                         <Title>Campus+ app project for students</Title>
@@ -54,7 +54,7 @@ function Projects() {
                     <Image src={phone1}/>
                 </RowCard>
             </ColCard>
-            <ColCard >
+            <ColCard width={"100%"}>
                 <RowCard>
                     <Description>
                         <Title>Website to find scholarship</Title>
@@ -89,7 +89,7 @@ function Projects() {
                     <Image src={web}/>
                 </RowCard>
             </ColCard>
-            <ColCard >
+            <ColCard width={"100%"}>
                 <RowCard>
                     <Description>
                         <Title>Website to find scholarship</Title>
