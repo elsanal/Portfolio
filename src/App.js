@@ -19,7 +19,7 @@ function App() {
         <Header/>
             <Switch>
                 <Route component={About} path="/about" exact/>
-                <Route component={About} path="/" exact/>
+                <Route component={Blogs} path="/" exact/>
                 <Route component={Resume} path="/resume" />
                 <Route component={Services} path="/services" />
                 <Route component={Projects} path="/projects" />

@@ -1,11 +1,11 @@
 .nav-link{
     height: fit-content;
     width:fit-content;
-    flex:0.166;
+    flex:1;
     justify-content:center;
     justify-items:center;
     color: white;
-    background-color:#1e3138;
+    background-color:#292d2e;
     text-decoration:none;
     text-align:center;
     padding-top: 1.5%;

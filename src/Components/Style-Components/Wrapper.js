@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
 display: flex;
 align-items: flex-start;
+align-content: flex-start;
 justify-content: flex-start;
 flex-direction: row;
 flex-wrap:wrap;
@@ -18,7 +19,19 @@ const HeaderWrapper = styled.div`
     /* width: 100%; */
     justify-items:center;
     align-items:center;
-    background-color:#D37102F5;
+    background-color:#0C0B0BA8;
+`;
+const ResumeWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap:wrap;
+    min-height: 90vh;
+    height:fit-content;
+    width:100%;
+    background-color:#0C0B0BA8;
 `;
 
-export {Wrapper,HeaderWrapper}
+export {Wrapper,HeaderWrapper,ResumeWrapper}

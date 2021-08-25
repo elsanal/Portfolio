@@ -2,14 +2,24 @@ import styled from 'styled-components'
 
 const Title = styled.h4`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
-    color: #FFFFFFE3;
+    font-size: 1.4em;
+    color: ${props=>props.color};;
     text-align: center;
-    background-color:#1A1818 ;
+    background-color:${props=>props.backgroundColor};
     width: 100%;
     margin: 0%;
     padding: 0%;
     
 `;
 
-export default Title
+const Span = styled.span`
+    margin-top: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: ${props=>props.color};
+    text-align: center;
+    /* background-color:#161414E3 ; */
+    margin-bottom:1%;
+`;
+
+export {Title,Span}

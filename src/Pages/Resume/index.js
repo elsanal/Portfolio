@@ -1,8 +1,8 @@
 import React from 'react'
-import {Wrapper} from '../../Components/Style-Components/Wrapper'
+import {ResumeWrapper} from '../../Components/Style-Components/Wrapper'
 import {Image} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
-import Title from '../../Components/Style-Components/Title'
+import {Title} from '../../Components/Style-Components/Title'
 import Button from '../../Components/Style-Components/Button'
 import Linked from '../../Components/Style-Components/Linked'
 import {Description,DescBody} from '../../Components/Style-Components/Description'
@@ -17,44 +17,14 @@ import edu2 from '../../Database/images/alex-elsone.JPG'
 
 function Resume() {
     return (
-        <Wrapper>
-            <ColCard width={"100%"}>
-                <RowCard>
-                    <Description>
-                        <Title>Campus+ app project for students</Title>
-                        <DescBody>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et sapiente libero est, ducimus veniam itaque eos totam nesciunt magni tempore vero dicta odio, labore maiores.</DescBody>
-                    </Description>
-                    <Description>
-                        <Title>Technologies</Title>
-                        <DescBody>
-                            - Flutter <br />
-                            - Firebase <br />
-                            - Sqlite <br />
-                            - MySQL
-                        </DescBody>
-                    </Description>
-                    <Description>
-                        <Title>For more info</Title>
-                        <DescBody>
-                            <Linked href="https://github.com/"color={"#080808"}>
-                                Github</Linked>
-                            <Linked href="https://github.com/"color={"#DD0C0C"}>
-                                Youtube</Linked>
-                            <Linked href="https://github.com/"color={"#482464"}>
-                                Play Store</Linked>
-                            <Linked href="https://github.com/"color={"#0D2412"}>
-                                Website</Linked>
-                        </DescBody>
-                    </Description>
-                </RowCard>
-                {/* <br/> */}
-                <RowCard>
-                    <Image src={phone}/>
-                    <Image src={phone1}/>
-                </RowCard>
+        <ResumeWrapper>
+            <ColCard >
+               <Title>Skills</Title>
+               <Title>Languages</Title>
+               <Title>Experiences</Title>
+               <Title></Title> 
             </ColCard>
-           
-        </Wrapper>
+        </ResumeWrapper>
     )
 }
 

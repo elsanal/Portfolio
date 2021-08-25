@@ -1,22 +1,15 @@
 import React from 'react'
-import './style.css'
 import styled from 'styled-components'
 import facebook from '../../Database/images/icons/facebook.jpg'
 import youtube from '../../Database/images/icons/youtube.png'
-import gmail from '../../Database/images/icons/gmail.png'
 import linkedin from '../../Database/images/icons/linkedin.png'
 import instagram from '../../Database/images/icons/instagram.jpg'
 import github from '../../Database/images/icons/github.png'
 import profile from '../../Database/images/elsone-prof.jpeg'
-
-
 import {Wrapper} from '../../Components/Style-Components/Wrapper'
 import {Icon,Profile} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
-import Title from '../../Components/Style-Components/Title'
-import Button from '../../Components/Style-Components/Button'
-import Linked from '../../Components/Style-Components/Linked'
-import {Description,DescBody} from '../../Components/Style-Components/Description'
+import {Title,Span} from '../../Components/Style-Components/Title'
 
 function Contacts() {
     return (
@@ -26,21 +19,18 @@ function Contacts() {
                <Span>Web & Mobile Apps Developper ★ Machine Learning ★ Electronic Information Engineer</Span>
             </ColCard>
             <RowCard>
-
-            
-            <ColCard>
+            <ColCard width={"300px"}>
                 <Title>★★★ Contacts ★★★</Title>
                     <Span>📞 Mobile : +86 131 4139 2484</Span> 
                     <Span>📬 Email : elsanal1995@gmail.com</Span>
             </ColCard>     
             <ColCard>
             <Title>★★★ Social Network ★★★</Title>  
-             
             <SocialWrapper>
                 <ContactCard>
                     <Icon src={facebook}/>
                     <Social href="https://www.facebook.com/ElsonXcode/">
-                        Facebook  
+                        Facebook
                     </Social>
                 </ContactCard>
                 <ContactCard>
@@ -100,18 +90,9 @@ const ContactCard = styled.div`
     margin:10px;
 `;
 
-const Span = styled.span`
-    margin-top: 1%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5vw;
-    color: black;
-    text-align: center;
-    /* background-color:#161414E3 ; */
-    margin-bottom:1%;
-`;
 const Social = styled.a`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.3vw;
+    font-size: 0.6em;
     color: black;
     text-align: left;
     padding: 4.5%;

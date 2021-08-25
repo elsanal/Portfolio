@@ -1,4 +1,4 @@
-import React, {Suspense, useState } from 'react'
+import React from 'react'
 import './style.css'
 import {HeaderWrapper} from '../Style-Components/Wrapper'
 import HeaderUl from '../Style-Components/List'
@@ -14,12 +14,12 @@ function Header() {
     return (
         <HeaderWrapper>
             <HeaderUl>
-               <NavLink to="/about" activeStyle={activeStyle} className="nav-link">About</NavLink>
-               <NavLink to="/projects" activeStyle={activeStyle} className="nav-link">Projects</NavLink>
-               <NavLink to="/services" activeStyle={activeStyle} className="nav-link">Services</NavLink>
-               <NavLink to="/resume" activeStyle={activeStyle} className="nav-link">Resume</NavLink>
-               <NavLink to="/blogs" activeStyle={activeStyle} className="nav-link">Blogs</NavLink>
-               <NavLink to="/contacts" activeStyle={activeStyle} className="nav-link">Contacts</NavLink>
+                <NavLink to="/blogs" activeStyle={activeStyle} className="nav-link">Blogs</NavLink>
+                <NavLink to="/projects" activeStyle={activeStyle} className="nav-link">Projects</NavLink>
+                <NavLink to="/services" activeStyle={activeStyle} className="nav-link">Services</NavLink>
+                <NavLink to="/resume" activeStyle={activeStyle} className="nav-link">Resume</NavLink>
+                <NavLink to="/about" activeStyle={activeStyle} className="nav-link">About</NavLink>
+                <NavLink to="/contacts" activeStyle={activeStyle} className="nav-link">Contacts</NavLink>
             </HeaderUl>
         </HeaderWrapper>
     )
