@@ -11,9 +11,9 @@ object-fit: cover;
 /* border-radius:3% 0% 0% 3%; */
 `;
 const Profile = styled.img`
-    height:30vw;
-    width: 30vw;
-    margin:1%;
+    height:${props=>props.width};
+    width: ${props=>props.width};
+    margin:3%;
     object-fit: cover;
     border-radius:50% 50%;
 `;

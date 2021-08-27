@@ -15,7 +15,7 @@ function Contacts() {
     return (
         <Wrapper>
             <ColCard width="100%">
-               <Profile src={profile}/>
+               <Profile src={profile} width="50%"/>
                <Span>Web & Mobile Apps Developper ★ Machine Learning ★ Electronic Information Engineer</Span>
             </ColCard>
             <RowCard>

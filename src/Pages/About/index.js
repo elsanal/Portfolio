@@ -12,7 +12,7 @@ function About() {
         <Wrapper>
              <RowCard>
              <ColCard width="300px">
-                    <Profile src={profile}/>
+                    <Profile src={profile} width="50%"/>
                     <Span color="black">Web & Mobile Apps Developper ★ Machine Learning ★ Electronic Information Engineer</Span>
             </ColCard>
             <ColCard >

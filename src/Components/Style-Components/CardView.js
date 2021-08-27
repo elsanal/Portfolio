@@ -13,6 +13,7 @@ const RowCard = styled.div`
     /* width:100%; */
     border-radius:3% 3% 3% 3%;
 `;
+
 const ColCard = styled.div`
     display: flex;
     flex: 1;
