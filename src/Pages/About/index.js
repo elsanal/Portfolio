@@ -50,7 +50,7 @@ import ReactHtmlParser  from 'html-react-parser'
                     {
                     about.length!==0?
                     <DescBody>{ReactHtmlParser(about[0]['data']['about_english'])}</DescBody>:
-                    <DescBody>Please waiting...</DescBody>
+                    <DescBody>{ReactHtmlParser(about[0]['data']['about_english'])}</DescBody>
                     }
                     
             </ColCard>
