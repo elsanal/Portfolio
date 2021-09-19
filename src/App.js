@@ -9,6 +9,10 @@ import Contacts from './Pages/Contacts'
 import Projects from './Pages/Projects'
 import Resume from './Pages/Resume'
 
+var dotenv = require('dotenv')
+var dotenvExpand = require('dotenv-expand')
+var myEnv = dotenv.config()
+dotenvExpand(myEnv)
 
 
 function App() {
