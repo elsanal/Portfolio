@@ -30,10 +30,10 @@ import ReactHtmlParser  from 'html-react-parser'
     
     useEffect(() => {
       myDB();
-      console.log(about) 
+      // console.log(about) 
       return ()=>{
         myDB();
-      }},[]);
+      }},[about]);
     return (
         <Wrapper>
              <RowCard>
