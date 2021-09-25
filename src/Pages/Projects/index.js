@@ -1,127 +1,73 @@
-import React from 'react'
-import {Wrapper} from '../../Components/Style-Components/Wrapper'
-import {Image} from '../../Components/Style-Components/ImageView'
-import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
-import {Title} from '../../Components/Style-Components/Title'
-import Linked from '../../Components/Style-Components/Linked'
-import {Description,DescBody} from '../../Components/Style-Components/Description'
-import web from '../../Database/images/web2.jpg'
-import mobile from '../../Database/images/mobile.jpg'
-import phone from '../../Database/images/phone.png'
-import phone1 from '../../Database/images/phone1.png'
-
+import React, { useEffect, useState } from "react";
+import { Wrapper } from "../../Components/Style-Components/Wrapper";
+import { Image } from "../../Components/Style-Components/ImageView";
+import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
+import { Title } from "../../Components/Style-Components/Title";
+import Linked from "../../Components/Style-Components/Linked";
+import {
+  Description,
+  DescBody,
+} from "../../Components/Style-Components/Description";
+import db from "../../Database/Firebase";
+import ReactHtmlParser from "html-react-parser";
 
 function Projects() {
-    return (
-        <Wrapper>
-            <ColCard width={"100%"}>
-                <RowCard>
-                    <Description>
-                        <Title>Campus+ app project for students</Title>
-                        <DescBody>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et sapiente libero est, ducimus veniam itaque eos totam nesciunt magni tempore vero dicta odio, labore maiores.</DescBody>
-                    </Description>
-                    <Description>
-                        <Title>Technologies</Title>
-                        <DescBody>
-                            - Flutter <br />
-                            - Firebase <br />
-                            - Sqlite <br />
-                            - MySQL
-                        </DescBody>
-                    </Description>
-                    <Description>
-                        <Title>For more info</Title>
-                        <DescBody>
-                            <Linked href="https://github.com/"color={"#080808"}>
-                                Github</Linked>
-                            <Linked href="https://github.com/"color={"#DD0C0C"}>
-                                Youtube</Linked>
-                            <Linked href="https://github.com/"color={"#482464"}>
-                                Play Store</Linked>
-                            <Linked href="https://github.com/"color={"#0D2412"}>
-                                Website</Linked>
-                        </DescBody>
-                    </Description>
-                </RowCard>
-                {/* <br/> */}
-                <RowCard>
-                    <Image src={phone}/>
-                    <Image src={phone1}/>
-                </RowCard>
-            </ColCard>
-            <ColCard width={"100%"}>
-                <RowCard>
-                    <Description>
-                        <Title>Website to find scholarship</Title>
-                        <DescBody>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et sapiente libero est, ducimus veniam itaque eos totam nesciunt magni tempore vero dicta odio, labore maiores.</DescBody>
-                    </Description>
-                    <Description>
-                        <Title>Technologies</Title>
-                        <DescBody>
-                            - Flutter <br />
-                            - Firebase <br />
-                            - Sqlite <br />
-                            - MySQL
-                        </DescBody>
-                    </Description>
-                    <Description>
-                        <Title>For more info</Title>
-                        <DescBody>
-                            <Linked href="https://github.com/"color={"#080808"}>
-                                Github</Linked>
-                            <Linked href="https://github.com/"color={"#DD0C0C"}>
-                                Youtube</Linked>
-                            <Linked href="https://github.com/"color={"#482464"}>
-                                Play Store</Linked>
-                            <Linked href="https://github.com/"color={"#0D2412"}>
-                                Website</Linked>
-                        </DescBody>
-                    </Description>
-                </RowCard>
-                {/* <br/> */}
-                <RowCard>
-                    <Image src={mobile}/>
-                    <Image src={web}/>
-                </RowCard>
-            </ColCard>
-            <ColCard width={"100%"}>
-                <RowCard>
-                    <Description>
-                        <Title>Website to find scholarship</Title>
-                        <DescBody>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et sapiente libero est, ducimus veniam itaque eos totam nesciunt magni tempore vero dicta odio, labore maiores.</DescBody>
-                    </Description>
-                    <Description>
-                        <Title>Technologies</Title>
-                        <DescBody>
-                            - Flutter <br />
-                            - Firebase <br />
-                            - Sqlite <br />
-                            - MySQL
-                        </DescBody>
-                    </Description>
-                    <Description>
-                        <Title>For more info</Title>
-                        <DescBody>
-                            <Linked href="https://github.com/"color={"#080808"}>
-                                Github</Linked>
-                            <Linked href="https://github.com/"color={"#DD0C0C"}>
-                                Youtube</Linked>
-                            <Linked href="https://github.com/"color={"#482464"}>
-                                Play Store</Linked>
-                            <Linked href="https://github.com/"color={"#0D2412"}>
-                                Website</Linked>
-                        </DescBody>
-                    </Description>
-                </RowCard>
-                <RowCard>
-                    <Image src={mobile}/>
-                    <Image src={web}/>
-                </RowCard>
-            </ColCard>
-        </Wrapper>
-    )
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    db.collection("projects")
+      .orderBy("createdate", "asc")
+      .limit(1)
+      .onSnapshot((snapshot) =>
+        setProjects(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
+  }, []);
+  if (!projects) {
+    return <h2>Loading...</h2>;
+  }
+
+  return (
+    <Wrapper>
+      {projects &&
+        projects.map((item) => (
+          <ColCard width={"100%"}>
+            <RowCard>
+              <Description>
+                <Title>{item["data"]["title"]}</Title>
+                <DescBody>
+                  {ReactHtmlParser(item["data"]["description"])}
+                </DescBody>
+              </Description>
+              <Description>
+                <Title>Technologies</Title>
+                <DescBody>
+                  {ReactHtmlParser(item["data"]["technologie"])}
+                </DescBody>
+              </Description>
+              <Description>
+                <Title>For more info</Title>
+                <DescBody>
+                  {item["data"]["socials"].map((social) => (
+                    <Linked href={social["link"]} color={"#080808"}>
+                      {social["social"]}
+                    </Linked>
+                  ))}
+                </DescBody>
+              </Description>
+            </RowCard>
+            <RowCard>
+              {item["data"]["images"].map((image) => (
+                <Image src={image["src"]["src"]} />
+              ))}
+            </RowCard>
+          </ColCard>
+        ))}
+    </Wrapper>
+  );
 }
 
-
-
-export default Projects
+export default Projects;

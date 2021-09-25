@@ -1,64 +1,51 @@
-import React from 'react'
-import ml from '../../Database/images/1.jpg'
-import electronic from '../../Database/images/2.jpg'
-import mobile from '../../Database/images/mobile.jpg'
-import web from '../../Database/images/web2.jpg'
-
+import React, {useEffect,useState} from 'react'
 import {Wrapper} from '../../Components/Style-Components/Wrapper'
 import {Image} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 import {Title} from '../../Components/Style-Components/Title'
 import {DescBody} from '../../Components/Style-Components/Description'
+import db from '../../Database/Firebase'
+import ReactHtmlParser  from 'html-react-parser'
 
 function Services() {
+
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+      db.collection("services")
+      .orderBy("createdate", "asc")
+      .onSnapshot((snapshot) =>
+        setServices(
+          snapshot.docs.map((doc) =>    
+          ({
+            id:doc.id,
+            data:doc.data()
+          })
+          )
+        )
+      )
+    },[]);
+    if(!services) {return <h2>Loading...</h2>}
+
     return (
         <Wrapper>
-            <RowCard>
-            <ColCard >
+            {
+                services && services.map((item)=>(
                 <RowCard>
-                <Image src={web}/>
-                <Image src={web}/>
+                    <ColCard >
+                        <RowCard>
+                        {
+                            item['data']['images'].map((image)=>(
+                                <Image src={image['src']['src']}/>
+                            ))
+                        }
+                        </RowCard>
+                        <Title backgroundColor="transparent" color="black">Web Development</Title>
+                        <DescBody>{ReactHtmlParser(item['data']['description_english'])}</DescBody>
+                    </ColCard>
                 </RowCard>
-                <Title backgroundColor="transparent" color="black">Web Development</Title>
-                <DescBody>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolores omnis hic incidunt atque voluptas impedit esse vitae illum deleniti, eligendi inventore officia.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sint autem modi vitae possimus perspiciatis in, aut explicabo reprehenderit facilis.
-                </DescBody>
-            </ColCard>
-            <ColCard width="300px">
-                <RowCard>
-                <Image src={web}/>
-                <Image src={web}/>
-                </RowCard>
-                <Title backgroundColor="transparent" color="black">Web Development</Title>
-                <DescBody>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolores omnis hic incidunt atque voluptas impedit esse vitae illum deleniti, eligendi inventore officia.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sint autem modi vitae possimus perspiciatis in, aut explicabo reprehenderit facilis.
-                </DescBody>
-            </ColCard>
-            <ColCard width="300px">
-                <RowCard>
-                <Image src={web}/>
-                <Image src={web}/>
-                </RowCard>
-                <Title backgroundColor="transparent" color="black">Web Development</Title>
-                <DescBody>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolores omnis hic incidunt atque voluptas impedit esse vitae illum deleniti, eligendi inventore officia.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sint autem modi vitae possimus perspiciatis in, aut explicabo reprehenderit facilis.
-                </DescBody>
-            </ColCard>
-            <ColCard width="300px">
-                <RowCard>
-                <Image src={web}/>
-                <Image src={web}/>
-                </RowCard>
-                <Title backgroundColor="transparent" color="black">Web Development</Title>
-                <DescBody>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, dolores omnis hic incidunt atque voluptas impedit esse vitae illum deleniti, eligendi inventore officia.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sint autem modi vitae possimus perspiciatis in, aut explicabo reprehenderit facilis.
-                </DescBody>
-            </ColCard>
-            </RowCard>
+                ))
+            }
             
         </Wrapper>
     )

@@ -19,6 +19,7 @@ const DescBox = styled.div`
 `;
 
 const DescBody = styled.p`
+    padding:10px;
     flex: 0.2;
     text-align: left;
     font-weight: 400;
