@@ -12,12 +12,11 @@ import {useParams} from "react-router-dom";
 function BlogDetails() {
   const [detail, setDetail] = useState(null);
   const {id} = useParams();
-  console.log(`${id}`);
   useEffect(() => {
-     db.collection("blogs").doc(`${id}`)
+     db.collection("blogs").doc(id)
      .onSnapshot((snapshot)=>setDetail(snapshot.data()));
     
-  }, []);
+  }, [detail]);
   if (!detail) {
     return <h2>Loading...</h2>;
   }
