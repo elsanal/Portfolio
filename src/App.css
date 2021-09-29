@@ -11,3 +11,19 @@
     background-size: cover;
     background-color:rgb(38, 40, 42); 
   }
+
+  @media screen and (max-width:1100px) {
+    .App {
+      /* text-align: center; */
+      height: fit-content;
+      min-height: 100vh;
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-bottom: 1%;
+      padding-top: 1%;
+      background-image: url(./Database/images/back8.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color:rgb(38, 40, 42); 
+    }
+  }

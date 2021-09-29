@@ -29,6 +29,8 @@ function Services() {
 
     return (
         <Wrapper>
+          <ColCard>
+          
             {
                 services && services.map((item)=>(
                 <RowCard>
@@ -46,7 +48,7 @@ function Services() {
                 </RowCard>
                 ))
             }
-            
+          </ColCard>  
         </Wrapper>
     )
 }
