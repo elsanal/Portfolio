@@ -28,7 +28,7 @@ const ColCard = styled.div`
     margin: 1%;
     margin-bottom: 5%;
     padding-bottom:1%;
-    background-color:#E2E7E6FA ;
+    background-color:#FFFFFFFA ;
     border-radius:1% 1% 1% 1%;
     
 `;

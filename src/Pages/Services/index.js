@@ -29,12 +29,10 @@ function Services() {
 
     return (
         <Wrapper>
-          <ColCard>
-          
-            {
+          {
                 services && services.map((item)=>(
                 <RowCard>
-                    <ColCard >
+                    <ColCard width="300px">
                         <RowCard>
                         {
                             item['data']['images'].map((image)=>(
@@ -42,13 +40,12 @@ function Services() {
                             ))
                         }
                         </RowCard>
-                        <Title backgroundColor="transparent" color="black">Web Development</Title>
+                        <Title backgroundColor="transparent" color="black">{item['data']['name_english']}</Title>
                         <DescBody>{ReactHtmlParser(item['data']['description_english'])}</DescBody>
                     </ColCard>
                 </RowCard>
                 ))
-            }
-          </ColCard>  
+            } 
         </Wrapper>
     )
 }

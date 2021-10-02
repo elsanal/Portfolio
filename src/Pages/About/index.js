@@ -35,7 +35,11 @@ import ReactHtmlParser  from 'html-react-parser'
                       <Profile 
                       src= {item['data']['src']['src']}
                       width="50%"/>
-                      <Span color="black">Web & Mobile Apps Developper ★ Machine Learning ★ Electronic Information Engineer</Span>
+                      <Span color="black">Web and Mobile App Developper <br/>
+                      ★<br/>
+                  Electronic Information Technology Engineer <br/>
+                  ★<br/>
+                  Master student in Computer Science (AI - Computer Vision)</Span>
               </ColCard>
               <ColCard width="300px">
                       <Title>About Me</Title>

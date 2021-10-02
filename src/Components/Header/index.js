@@ -9,7 +9,7 @@ function Header() {
     const activeStyle = {
         fontWeight:"bold",
         color:"white",
-        backgroundColor:"#0C0B0BF5",
+        backgroundColor:"#5C4E31F5",
     }
     return (
         <HeaderWrapper>

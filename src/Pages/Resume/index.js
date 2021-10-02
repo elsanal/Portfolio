@@ -34,16 +34,18 @@ function Resume() {
   }
 
   return (
-    <ResumeWrapper>
+    <div>
       {resume &&
         resume.map((item) => (
-          <div>
-            <ResumeCol mxwidth="350px" backgroundColor="#D4BA64FA">
+          <ResumeWrapper>
+            <ResumeCol  backgroundColor="#192A3BFA">
               <ResumeCol width="100%">
                 <Profile src={item["data"]["src"]["src"]} width="70%" />
                 <Title>SANA ALOUTE</Title>
                 <Span color="white">
-                  Electronic Information Technology Engineer
+                  Web and Mobile App Developper <br/>
+                  Electronic Information Technology Engineer <br/>
+                  Master student in Computer Science (AI - Computer Vision)
                 </Span>
               </ResumeCol>
               <ResumeCol width="100%">
@@ -107,9 +109,10 @@ function Resume() {
                 ))}
               </ResumeCol>
             </ResumeCol>
-          </div>
+          </ResumeWrapper>
         ))}
-    </ResumeWrapper>
+    
+    </div>
   );
 }
 

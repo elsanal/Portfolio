@@ -41,7 +41,11 @@ function Contacts() {
                    <div>
                        <ColCard width="100%">
                <Profile src={item['data']['src']['src']} width="50%;"/>
-               <Span>Web & Mobile Apps Developper ★ Machine Learning ★ Electronic Information Engineer</Span>
+               <Span color="black">Web and Mobile App Developper <br/>
+                      ★<br/>
+                  Electronic Information Technology Engineer <br/>
+                  ★<br/>
+                  Master student in Computer Science (AI - Computer Vision)</Span>
             </ColCard>
             <RowCard>
             <ColCard width={"300px"}>
@@ -52,31 +56,31 @@ function Contacts() {
             <ColCard>
             <Title>★★★ Social Network ★★★</Title>  
             <SocialWrapper>
-                <ContactCard>
+                <ContactCard href={item['data']['fb_link']}>
                     <Icon src={facebook}/>
                     <Social href={item['data']['fb_link']}>
                         Facebook
                     </Social>
                 </ContactCard>
-                <ContactCard>
+                <ContactCard href={item['data']['yt_link']}>
                     <Icon src={youtube}/>
                     <Social href={item['data']['yt_link']}>
                         Youtube
                     </Social>
                 </ContactCard>
-                <ContactCard>
+                <ContactCard href={item['data']['ig_link']}>
                     <Icon src={instagram}/>
                     <Social href={item['data']['ig_link']}>
                         Instagram
                     </Social>
                 </ContactCard>
-                <ContactCard>
+                <ContactCard href={item['data']['linkedIn_link']}>
                     <Icon src={linkedin}/>
                     <Social href={item['data']['linkedIn_link']}>
                         Linkedin
                     </Social>
                 </ContactCard>
-                <ContactCard>
+                <ContactCard href={item['data']['git_link']}>
                     <Icon src={github}/>
                     <Social href={item['data']['git_link']}>
                         Github
@@ -108,7 +112,7 @@ const SocialWrapper = styled.div`
 
 
 
-const ContactCard = styled.div`
+const ContactCard = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,6 +120,7 @@ const ContactCard = styled.div`
     height:fit-content;
     width: fit-content;
     margin:10px;
+    text-decoration: none;
 `;
 
 const Social = styled.a`

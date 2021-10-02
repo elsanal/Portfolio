@@ -34,7 +34,7 @@ function Projects() {
     <Wrapper>
       {projects &&
         projects.map((item) => (
-          <ColCard width={"100%"}>
+          <ColCard width={"100%"} >
             <RowCard>
               <Description>
                 <Title>{item["data"]["title"]}</Title>
@@ -43,13 +43,13 @@ function Projects() {
                 </DescBody>
               </Description>
               <Description>
-                <Title>Technologies</Title>
+                <Title>Technologies used : </Title>
                 <DescBody>
                   {ReactHtmlParser(item["data"]["technologie"])}
                 </DescBody>
               </Description>
               <Description>
-                <Title>For more info</Title>
+                <Title>For more info :</Title>
                 <DescBody>
                   {item["data"]["socials"].map((social) => (
                     <Linked href={social["link"]} color={"#080808"}>

@@ -3,7 +3,7 @@ import { Wrapper } from "../../Components/Style-Components/Wrapper";
 import { Image } from "../../Components/Style-Components/ImageView";
 import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
 import Linked from "../../Components/Style-Components/Linked";
-import { Title } from "../../Components/Style-Components/Title";
+import { BlogTitle } from "../../Components/Style-Components/Title";
 import {
   DescBody,
   DescBox,
@@ -35,7 +35,7 @@ function Blogs() {
       {blogs &&
         blogs.map((item) => (
           <ColCard width={"300px"}>
-            <Title>{item["data"]["title"]}</Title>
+            <BlogTitle>{item["data"]["title"]}</BlogTitle>
             <RowCard>
               {item["data"]["images"].map((image) => (
                 <Image src={image["src"]["src"]} />
