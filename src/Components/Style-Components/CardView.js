@@ -8,10 +8,10 @@ const RowCard = styled.div`
     align-items: flex-start;
     justify-items: space-evenly;
     justify-content: space-evenly;
-    /* background-color:#E2E7E6FA ; */
+    background-color:${props=>props.color};
     height:fit-content;
     /* width:100%; */
-    border-radius:3% 3% 3% 3%;
+    border-radius:0.5% 0.5%;
 `;
 
 const ColCard = styled.div`

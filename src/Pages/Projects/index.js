@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Wrapper } from "../../Components/Style-Components/Wrapper";
-import { Image } from "../../Components/Style-Components/ImageView";
+import { Image2 } from "../../Components/Style-Components/ImageView";
 import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
 import { Title } from "../../Components/Style-Components/Title";
 import Loading from "../../Components/Style-Components/Loading";
@@ -34,7 +34,7 @@ function Projects() {
       {projects &&
         projects.map((item) => (
           <ColCard width={"100%"} >
-            <RowCard>
+            <RowCard color='#3C633CFA'>
               <Description>
                 <Title>{item["data"]["title"]}</Title>
                 <DescBody>
@@ -60,7 +60,7 @@ function Projects() {
             </RowCard>
             <RowCard>
               {item["data"]["images"].map((image) => (
-                <Image src={image["src"]["src"]} />
+                <Image2 src={image["src"]["src"]} />
               ))}
             </RowCard>
           </ColCard>
