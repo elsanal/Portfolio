@@ -10,7 +10,7 @@ import {Icon,Profile} from '../../Components/Style-Components/ImageView'
 import {ColCard,RowCard} from '../../Components/Style-Components/CardView'
 import {Title,Span} from '../../Components/Style-Components/Title'
 import db from '../../Database/Firebase'
-
+import Loading from "../../Components/Style-Components/Loading";
 
 function Contacts() {
 
@@ -33,7 +33,7 @@ function Contacts() {
       )
     },[]);
     if(!contacts) {return <h2>Loading...</h2>}
-
+    if (!contacts) {return <Loading/>;}
     return (
         <Wrapper>
             {

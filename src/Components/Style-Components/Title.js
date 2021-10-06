@@ -12,17 +12,26 @@ const Title = styled.h4`
     
 `;
 const BlogTitle = styled.h4`
+    width: 90%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.7em;
-    color: ${props=>props.color};;
+    color: #D3D2D2FB;
     text-align: center;
-    background-color:#6B684C8C ;
+    background-color:#000000 ;
     /* width: 100%; */
     margin: 3%;
-    padding: 1%;
-    
+    padding: 1%; 
 `;
 
+const DetailTitle = styled.h4`
+    width: 90%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5em;
+    color: #3F3C3CFB;
+    text-align: center;
+    margin: 3%;
+    padding: 1%; 
+`;
 const Span = styled.span`
     margin-top: 1%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,4 +42,4 @@ const Span = styled.span`
     margin-bottom:1%;
 `;
 
-export {Title,Span,BlogTitle}
+export {Title,Span,BlogTitle,DetailTitle}

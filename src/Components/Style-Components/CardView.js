@@ -20,7 +20,7 @@ const ColCard = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: center;
+    justify-items: start;
     height: auto;
     /* width: 100%; */
     min-width: ${props=>props.width};
@@ -29,7 +29,7 @@ const ColCard = styled.div`
     margin-bottom: 5%;
     padding-bottom:1%;
     background-color:#FFFFFFFA ;
-    border-radius:1% 1% 1% 1%;
+    border-radius:0.5% 0.5%;
     
 `;
 

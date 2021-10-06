@@ -4,6 +4,7 @@ import { Image } from "../../Components/Style-Components/ImageView";
 import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
 import Linked from "../../Components/Style-Components/Linked";
 import { BlogTitle } from "../../Components/Style-Components/Title";
+import Loading from "../../Components/Style-Components/Loading";
 import {
   DescBody,
   DescBox,
@@ -27,9 +28,7 @@ function Blogs() {
         )
       );
   }, []);
-  if (!blogs) {
-    return <h2>Loading...</h2>;
-  }
+  if (!blogs) {return <Loading/>;}
   return (
     <Wrapper>
       {blogs &&
@@ -37,9 +36,11 @@ function Blogs() {
           <ColCard width={"300px"}>
             <BlogTitle>{item["data"]["title"]}</BlogTitle>
             <RowCard>
-              {item["data"]["images"].map((image) => (
-                <Image src={image["src"]["src"]} />
-              ))}
+              {/* {i.map((image) => (
+                
+              ))} */}
+              {/* <Image src={item["data"]["images"][0]["src"]["src"]} /> */}
+              <Image src={item["data"]["images"][1]["src"]["src"]} />
             </RowCard>
             <DescBox>
               <DescBody>

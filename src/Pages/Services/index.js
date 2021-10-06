@@ -6,6 +6,7 @@ import {Title} from '../../Components/Style-Components/Title'
 import {DescBody} from '../../Components/Style-Components/Description'
 import db from '../../Database/Firebase'
 import ReactHtmlParser  from 'html-react-parser'
+import Loading from "../../Components/Style-Components/Loading";
 
 function Services() {
 
@@ -25,7 +26,7 @@ function Services() {
         )
       )
     },[]);
-    if(!services) {return <h2>Loading...</h2>}
+    if (!services) {return <Loading/>;}
 
     return (
         <Wrapper>

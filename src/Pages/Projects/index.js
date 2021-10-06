@@ -3,6 +3,7 @@ import { Wrapper } from "../../Components/Style-Components/Wrapper";
 import { Image } from "../../Components/Style-Components/ImageView";
 import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
 import { Title } from "../../Components/Style-Components/Title";
+import Loading from "../../Components/Style-Components/Loading";
 import Linked from "../../Components/Style-Components/Linked";
 import {
   Description,
@@ -26,9 +27,7 @@ function Projects() {
         )
       );
   }, []);
-  if (!projects) {
-    return <h2>Loading...</h2>;
-  }
+  if (!projects) {return <Loading/>;}
 
   return (
     <Wrapper>

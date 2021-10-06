@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Profile } from "../../Components/Style-Components/ImageView";
+import Loading from "../../Components/Style-Components/Loading";
 import {
   ResumeWrapper,
   ResumeCol,
@@ -29,10 +30,8 @@ function Resume() {
         )
       );
   }, []);
-  if (!resume) {
-    return <h2>Loading...</h2>;
-  }
 
+  if (!resume) {return <Loading/>;}
   return (
     <div>
       {resume &&
@@ -41,12 +40,12 @@ function Resume() {
             <ResumeCol  backgroundColor="#192A3BFA">
               <ResumeCol width="100%">
                 <Profile src={item["data"]["src"]["src"]} width="70%" />
-                <Title>SANA ALOUTE</Title>
-                <Span color="white">
-                  Web and Mobile App Developper <br/>
+                <Title color="white">SANA ALOUTE</Title>
+                <Span color="white">Web and Mobile App Developper <br/>
+                      ★<br/>
                   Electronic Information Technology Engineer <br/>
-                  Master student in Computer Science (AI - Computer Vision)
-                </Span>
+                  ★<br/>
+                  Master student in Computer Science (AI - Computer Vision)</Span>
               </ResumeCol>
               <ResumeCol width="100%">
                 <Title color="white" backgroundColor="#030303FA">

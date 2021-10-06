@@ -12,7 +12,7 @@ const Linked = styled.a`
   border-radius: 4px;
   margin: 2%;
   height:fit-content;
-  width:fit-content; 
+  width:100px; 
 `;
 
 export default Linked

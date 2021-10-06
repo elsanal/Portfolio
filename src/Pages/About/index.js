@@ -6,6 +6,7 @@ import {DescBody} from '../../Components/Style-Components/Description'
 import {RowCard,ColCard} from '../../Components/Style-Components/CardView'
 import db from '../../Database/Firebase'
 import ReactHtmlParser  from 'html-react-parser'
+import Loading from "../../Components/Style-Components/Loading";
 
  function About() {
     const [about, setAbout] = useState([]);
@@ -25,7 +26,7 @@ import ReactHtmlParser  from 'html-react-parser'
         )
       )
     },[]);
-    if(!about) {return <h2>Loading...</h2>}
+    if (!about) {return <Loading/>;}
     return (
         <Wrapper>
           {

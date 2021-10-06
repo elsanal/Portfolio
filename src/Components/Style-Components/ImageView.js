@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const Image = styled.img`
-max-height:300px;
-max-width: 49%;
+/* max-height:500px; */
+max-width: 99%;
 height: auto;
 width: auto;
 padding:0.5%;
