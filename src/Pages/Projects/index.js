@@ -29,14 +29,18 @@ function Projects() {
     <Wrapper>
       {projects &&
         projects.map((item) => (
-          <Link style={{textDecoration: "none", color: "black"}} to={"/project+details/" + item["id"]}>
-            <ColCard width={"100%"}>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to={"/project+details/" + item["id"]}
+          >
+            <ColCard width={"300px"}>
               <RowCard color="#FFFFFFFB">
                 <Image2 src={item["data"]["images"][0]["src"]["src"]} />
                 <Image2 src={item["data"]["images"][1]["src"]["src"]} />
               </RowCard>
               <Title>{item["data"]["title"]}</Title>
             </ColCard>
+            
           </Link>
         ))}
     </Wrapper>

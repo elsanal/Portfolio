@@ -9,7 +9,7 @@ flex-direction: row;
 flex-wrap:wrap;
 min-height: 90vh;
 height:fit-content;
-width:fit-content;
+width:96%;
 padding: 2%;
 background-color:#F5F0F0;
 `;

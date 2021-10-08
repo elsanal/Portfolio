@@ -29,17 +29,17 @@ function ProjectDetails() {
     <Wrapper>
       {project && (
         <ColCard width={"100%"}>
-          <RowCard color="#3C633CFA">
+          <RowCard color="#9AAD9AFA">
             <Description>
-              <Title>{project["title"]}</Title>
+              <Title color="white">{project["title"]}</Title>
               <DescBody>{ReactHtmlParser(project["description"])}</DescBody>
             </Description>
             <Description>
-              <Title>Technologies used : </Title>
+              <Title color="white">Technologies used : </Title>
               <DescBody>{ReactHtmlParser(project["technologie"])}</DescBody>
             </Description>
-            <Description>
-              <Title>For more info :</Title>
+            <Description >
+              <Title color="white" >For more info :</Title>
               <DescBody>
                 {project["socials"].map((social) => (
                   <Linked href={social["link"]} color={"#080808"}>
