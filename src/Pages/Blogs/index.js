@@ -35,13 +35,7 @@ function Blogs() {
         blogs.map((item) => (
           <ColCard width={"300px"}>
             <BlogTitle>{item["data"]["title"]}</BlogTitle>
-            <RowCard>
-              {/* {i.map((image) => (
-                
-              ))} */}
-              {/* <Image src={item["data"]["images"][0]["src"]["src"]} /> */}
-              <Image src={item["data"]["images"][1]["src"]["src"]} />
-            </RowCard>
+            <Image src={item["data"]["images"][1]["src"]["src"]} />
             <DescBox>
               <DescBody>
                 {ReactHtmlParser(item["data"]["description"])}

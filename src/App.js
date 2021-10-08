@@ -5,7 +5,9 @@ import Header from "./Components/Header";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Blogs from "./Pages/Blogs";
-import BlogDetails from "./Pages/Details";
+import BlogDetails from "./Pages/Details/BlogDetails";
+import ServiceDetails from "./Pages/Details/ServicesDetails";
+import ProjectDetails from "./Pages/Details/ProjectDetails";
 import Contacts from "./Pages/Contacts";
 import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
@@ -30,6 +32,8 @@ function App() {
             <Route component={Blogs} path="/blogs" />
             <Route component={Contacts} path="/contacts" />
             <Route component={BlogDetails} path="/blog+details/:id" />
+            <Route component={ServiceDetails} path="/service+details/:id" />
+            <Route component={ProjectDetails} path="/project+details/:id" />
           </Switch>
         </Router>
       </div>
