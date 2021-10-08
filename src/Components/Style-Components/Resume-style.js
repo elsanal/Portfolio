@@ -15,7 +15,7 @@ const ResumeWrapper = styled.div`
     /* width:fit-content; */
     padding-right: 2%;
     padding-left: 2%;
-    background-color:#FFFFFF;
+    background-color:#FFFFFFB0;
 `;
 
 

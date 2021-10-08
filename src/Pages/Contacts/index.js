@@ -39,7 +39,7 @@ function Contacts() {
             {
                 contacts && contacts.map((item,index)=>(
                    <div>
-                       <ColCard width="100%">
+                       <ColCard width="100%" style={{backgroundColor:"#FFFFFFB0"}}>
                <Profile src={item['data']['src']['src']} width="50%;"/>
                <Span color="black">Web and Mobile App Developper <br/>
                       ★<br/>
@@ -48,12 +48,12 @@ function Contacts() {
                   Master student in Computer Science (AI - Computer Vision)</Span>
             </ColCard>
             <RowCard>
-            <ColCard width={"300px"}>
+            <ColCard width={"300px"} style={{backgroundColor:"#FFFFFFB0"}}>
                 <Title>★★★ Contacts ★★★</Title>
                     <Span>📞 Mobile : {item['data']['phone']}</Span> 
                     <Span>📬 Email : {item['data']['email']}</Span>
             </ColCard>     
-            <ColCard>
+            <ColCard style={{backgroundColor:"#FFFFFFB0"}}>
             <Title>★★★ Social Network ★★★</Title>  
             <SocialWrapper>
                 <ContactCard href={item['data']['fb_link']}>

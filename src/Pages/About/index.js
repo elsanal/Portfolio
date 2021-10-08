@@ -32,7 +32,7 @@ import Loading from "../../Components/Style-Components/Loading";
           {
             about && about.map((item,index)=>(
             <RowCard>
-              <ColCard width="300px">
+              <ColCard width="300px" style={{backgroundColor:"#FFFFFFB0"}}>
                       <Profile 
                       src= {item['data']['src']['src']}
                       width="50%"/>
@@ -42,7 +42,7 @@ import Loading from "../../Components/Style-Components/Loading";
                   ★<br/>
                   Master student in Computer Science (AI - Computer Vision)</Span>
               </ColCard>
-              <ColCard width="300px">
+              <ColCard width="300px" style={{backgroundColor:"#FFFFFFB0"}}>
                       <Title>About Me</Title>
                       <DescBody>{ReactHtmlParser(item['data']['about_english'])}</DescBody>     
               </ColCard>

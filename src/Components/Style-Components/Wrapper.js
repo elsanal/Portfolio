@@ -11,7 +11,7 @@ min-height: 90vh;
 height:fit-content;
 width:96%;
 padding: 2%;
-background-color:#F5F0F0;
+background-color:#FFFFFF2F;
 `;
 
 const HeaderWrapper = styled.div`
@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
     /* width: 100%; */
     justify-items:center;
     align-items:center;
-    background-color:#F5F0F0;
+    background-color:#FFFFFF2F;
 `;
 
 
