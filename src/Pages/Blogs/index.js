@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Wrapper } from "../../Components/Style-Components/Wrapper";
 import { Image } from "../../Components/Style-Components/ImageView";
-import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
-import Linked from "../../Components/Style-Components/Linked";
-import { BlogTitle } from "../../Components/Style-Components/Title";
+import { ColCard} from "../../Components/Style-Components/CardView";
+import { Title } from "../../Components/Style-Components/Title";
 import Loading from "../../Components/Style-Components/Loading";
-import {
-  DescBody,
-  DescBox,
-} from "../../Components/Style-Components/Description";
+import Linked from "../../Components/Style-Components/Linked";
 import db from "../../Database/Firebase";
-import ReactHtmlParser from "html-react-parser";
 import { Link } from "react-router-dom";
 
 function Blogs() {
@@ -34,15 +29,9 @@ function Blogs() {
       {blogs &&
         blogs.map((item) => (
           <ColCard width={"300px"}>
-            <BlogTitle>{item["data"]["title"]}</BlogTitle>
+            <Link style={{textDecoration: "none", color: "black"}} to={"/blog+details/" + item["id"]} key={item["id"]}>
             <Image src={item["data"]["images"][1]["src"]["src"]} />
-            <DescBox>
-              <DescBody>
-                {ReactHtmlParser(item["data"]["description"])}
-              </DescBody>
-            </DescBox>
-            <Link to={"/blog+details/" + item["id"]} key={item["id"]}>
-              <Linked color={"#080808"}>Read more</Linked>
+            <Title >{item["data"]["title"]}</Title>
             </Link>
           </ColCard>
         ))}

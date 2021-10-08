@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Wrapper } from "../../Components/Style-Components/Wrapper";
 import { Image } from "../../Components/Style-Components/ImageView";
 import { ColCard, RowCard } from "../../Components/Style-Components/CardView";
-import { DetailTitle } from "../../Components/Style-Components/Title";
 import { DescBody } from "../../Components/Style-Components/Description";
 import db from "../../Database/Firebase";
 import ReactHtmlParser from "html-react-parser";

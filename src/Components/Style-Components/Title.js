@@ -5,10 +5,11 @@ const Title = styled.h4`
     font-size: 1.4em;
     color: ${props=>props.color};;
     text-align: center;
+    text-decoration: none;
     background-color:${props=>props.backgroundColor};
-    width: 100%;
+    /* width: 90%; */
     margin: 0%;
-    padding: 0%;
+    padding: 2%;
     
 `;
 const BlogTitle = styled.h4`

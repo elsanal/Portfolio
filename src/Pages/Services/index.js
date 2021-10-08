@@ -30,7 +30,7 @@ function Services() {
       {services &&
         services.map((item) => (
           <RowCard>
-            <Link to={"/service+details/" + item["id"]}>
+            <Link style={{textDecoration: "none", color: "black"}} to={"/service+details/" + item["id"]}>
               <ColCard width="300px">
                 <Image src={item["data"]["images"][0]["src"]["src"]} />
                 <Title backgroundColor="transparent" color="black">

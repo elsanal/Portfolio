@@ -29,7 +29,7 @@ function Projects() {
     <Wrapper>
       {projects &&
         projects.map((item) => (
-          <Link to={"/project+details/" + item["id"]}>
+          <Link style={{textDecoration: "none", color: "black"}} to={"/project+details/" + item["id"]}>
             <ColCard width={"100%"}>
               <RowCard color="#FFFFFFFB">
                 <Image2 src={item["data"]["images"][0]["src"]["src"]} />
